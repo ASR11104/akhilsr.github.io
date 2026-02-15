@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">AK</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="name">Akhil S R</h1>
+                <p class="tagline">Backend Developer | Golang Enthusiast</p>
+                <p class="hero-description">
+                    Building scalable backend systems with modern technologies.
+                    Over 5 years of experience in distributed systems and API development.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre><code><span class="keyword">package</span> main
+
+<span class="keyword">import</span> (
+    <span class="string">"fmt"</span>
+)
+
+<span class="keyword">func</span> <span class="function">main</span>() {
+    <span class="comment">// Building scalable systems</span>
+    skills := []<span class="type">string</span>{
+        <span class="string">"Golang"</span>,
+        <span class="string">"Node.js"</span>,
+        <span class="string">"Python"</span>,
+    }
+    
+    <span class="keyword">for</span> _, skill := <span class="keyword">range</span> skills {
+        fmt.Printf(<span class="string">"Building with %s\n"</span>, skill)
+    }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a backend developer with <span class="highlight">5+ years of experience</span> 
+                        in building robust and scalable applications. My journey started in 
+                        <span class="highlight">June 2019</span>, and since then I've been 
+                        deeply involved in designing and implementing distributed systems.
+                    </p>
+                    <p>
+                        For the <span class="highlight">past 4 years</span>, I've primarily worked with 
+                        <span class="highlight">Golang</span>, leveraging its concurrency model to build 
+                        high-performance services. My technical expertise spans across multiple 
+                        technologies including Node.js and Python.
+                    </p>
+                    <p>
+                        I'm passionate about writing clean, maintainable code and building systems 
+                        that can handle real-world scale. When I'm not coding, you can find me 
+                        exploring new technologies and contributing to open-source projects.
+                    </p>
+                </div>
+                <div class="about-timeline">
+                    <div class="timeline-item">
+                        <span class="year">2019</span>
+                        <span class="label">Started Career</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2020</span>
+                        <span class="label">Golang Focus</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2024</span>
+                        <span class="label">5+ Years Exp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card primary">
+                    <div class="skill-icon">🐹</div>
+                    <h3>Primary Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag golang">Golang</span>
+                    </div>
+                    <p class="skill-description">
+                        4+ years of hands-on experience. Building microservices, 
+                        REST APIs, and concurrent systems.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📜</div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                    <p class="skill-description">
+                        Experience building REST APIs, automation scripts, 
+                        and full-stack applications.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag future">AWS (Learning)</span>
+                        <span class="skill-tag future">Kafka (Learning)</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                    <p class="skill-description">
+                        Currently expanding into cloud-native technologies 
+                        and message queues.
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                    <p class="skill-description">
+                        Designing schemas, optimizing queries, and managing 
+                        data persistence layers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Microservices API Gateway</h3>
+                        <span class="project-tech">Golang</span>
+                    </div>
+                    <p class="project-description">
+                        High-performance API gateway handling 10k+ requests/second 
+                        with rate limiting, authentication, and service discovery.
+                    </p>
+                    <div class="project-features">
+                        <span>gRPC</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Real-time Data Pipeline</h3>
+                        <span class="project-tech">Go + Node.js</span>
+                    </div>
+                    <p class="project-description">
+                        Scalable data ingestion pipeline processing millions of 
+                        events daily with WebSocket notifications.
+                    </p>
+                    <div class="project-features">
+                        <span>WebSocket</span>
+                        <span>PostgreSQL</span>
+                        <span>Redis</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Automation Scripts</h3>
+                        <span class="project-tech">Python</span>
+                    </div>
+                    <p class="project-description">
+                        Collection of automation tools for CI/CD pipelines, 
+                        data processing, and system monitoring.
+                    </p>
+                    <div class="project-features">
+                        <span>CI/CD</span>
+                        <span>REST APIs</span>
+                        <span>Testing</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>
+                    I'm always open to discussing new projects, creative ideas, 
+                    or opportunities to be part of your visions.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:hello@example.com" class="contact-link">
+                        <span class="contact-icon">✉️</span>
+                        hello@example.com
+                    </a>
+                    <a href="https://github.com" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="contact-link">
+                        <span class="contact-icon">💼</span>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Akhil S R. Built with passion and Golang 🐹</p>
+    </footer>
+</body>
+</html>
