@@ -45,7 +45,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.15), transparent),
         radial-gradient(ellipse 60% 40% at 100% 0%, rgba(0, 212, 170, 0.08), transparent);
     pointer-events: none;
@@ -228,7 +228,7 @@ section {
     overflow: hidden;
     width: 100%;
     max-width: 450px;
-    box-shadow: 
+    box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 0 1px rgba(255, 255, 255, 0.05);
 }
@@ -247,9 +247,17 @@ section {
     border-radius: 50%;
 }
 
-.dot.red { background: #ff5f57; }
-.dot.yellow { background: #febc2e; }
-.dot.green { background: #28c840; }
+.dot.red {
+    background: #ff5f57;
+}
+
+.dot.yellow {
+    background: #febc2e;
+}
+
+.dot.green {
+    background: #28c840;
+}
 
 .code-block pre {
     padding: 1.5rem;
@@ -262,12 +270,29 @@ section {
     line-height: 1.7;
 }
 
-.keyword { color: #ff7b72; }
-.string { color: #a5d6ff; }
-.comment { color: #8b949e; }
-.function { color: #d2a8ff; }
-.type { color: #79c0ff; }
-.number { color: #79c0ff; }
+.keyword {
+    color: #ff7b72;
+}
+
+.string {
+    color: #a5d6ff;
+}
+
+.comment {
+    color: #8b949e;
+}
+
+.function {
+    color: #d2a8ff;
+}
+
+.type {
+    color: #79c0ff;
+}
+
+.number {
+    color: #79c0ff;
+}
 
 /* About Section */
 .about {
@@ -329,50 +354,399 @@ section {
     font-size: 0.9rem;
 }
 
-/* Skills Section */
-.skills-grid {
+/* Skills Section - Bento Grid */
+.skills-bento {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
 }
 
-.skill-card {
+.bento-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem;
+    border-radius: 16px;
+    padding: 1.75rem;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.skill-card:hover {
-    background: var(--bg-card-hover);
-    transform: translateY(-4px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+.bento-card:hover {
+    border-color: rgba(0, 212, 170, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
-.skill-card.primary {
+.bento-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Hero Card */
+.bento-hero {
+    grid-column: span 6;
+    background: linear-gradient(135deg, rgba(0, 173, 216, 0.08), rgba(124, 58, 237, 0.06), transparent);
     border-color: var(--accent-golang);
-    background: linear-gradient(135deg, rgba(0, 212, 216, 0.08), transparent);
+    position: relative;
 }
 
-.skill-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+.bento-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 173, 216, 0.06), transparent 70%);
+    pointer-events: none;
 }
 
-.skill-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+.bento-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
-.skill-tags {
+.bento-hero-left {
+    flex: 1;
+}
+
+.bento-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-golang);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+}
+
+.bento-hero-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.bento-hero-right {
+    display: flex;
+    align-items: center;
+}
+
+.bento-code-snippet {
+    background: var(--code-bg);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.bento-code-snippet code {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+}
+
+.bento-hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Languages Card */
+.bento-languages {
+    grid-column: span 3;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.skill-bar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.skill-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-bar-level {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skill-bar-track {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    width: 0;
+    animation: fillBar 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.skill-bar-fill[data-color="golang"] {
+    background: linear-gradient(90deg, var(--accent-golang), #00e6c3);
+}
+
+.skill-bar-fill[data-color="python"] {
+    background: linear-gradient(90deg, var(--accent-python), #5a9fd4);
+}
+
+.skill-bar-fill[data-color="node"] {
+    background: linear-gradient(90deg, var(--accent-node), #5ec75e);
+}
+
+@keyframes fillBar {
+    to {
+        width: var(--fill-width);
+    }
+}
+
+.skill-tags.compact {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    gap: 0.4rem;
 }
 
+.skill-tags.compact .skill-tag {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.7rem;
+}
+
+/* Cloud Card */
+.bento-cloud {
+    grid-column: span 3;
+}
+
+.cloud-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.cloud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 0.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.cloud-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 212, 170, 0.2);
+    transform: translateY(-2px);
+}
+
+.cloud-item.featured {
+    background: rgba(0, 212, 170, 0.06);
+    border-color: rgba(0, 212, 170, 0.15);
+}
+
+.cloud-icon {
+    font-size: 1.5rem;
+}
+
+.cloud-name {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Databases Card */
+.bento-databases {
+    grid-column: span 3;
+}
+
+.db-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.db-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.db-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 212, 170, 0.2);
+}
+
+.db-icon {
+    font-size: 1.25rem;
+}
+
+.db-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.db-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.db-detail {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Messaging Card */
+.bento-messaging {
+    grid-column: span 3;
+}
+
+.messaging-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.messaging-item {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease;
+}
+
+.messaging-item:hover {
+    transform: translateX(4px);
+}
+
+.messaging-item.kafka {
+    background: linear-gradient(135deg, rgba(0, 173, 216, 0.06), transparent);
+    border-color: rgba(0, 173, 216, 0.15);
+}
+
+.messaging-item.kafka:hover {
+    border-color: rgba(0, 173, 216, 0.3);
+}
+
+.messaging-item.rabbitmq {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.06), transparent);
+    border-color: rgba(255, 102, 0, 0.15);
+}
+
+.messaging-item.rabbitmq:hover {
+    border-color: rgba(255, 102, 0, 0.3);
+}
+
+.messaging-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.messaging-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Competencies Card */
+.bento-competencies {
+    grid-column: span 6;
+}
+
+.competency-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.competency-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.competency-pill:hover {
+    background: rgba(0, 212, 170, 0.06);
+    border-color: rgba(0, 212, 170, 0.2);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.pill-icon {
+    font-size: 1rem;
+}
+
+/* Keep old skill-tag styles for compact tags */
 .skill-tag {
     padding: 0.375rem 0.875rem;
     background: var(--bg-secondary);
@@ -389,19 +763,272 @@ section {
     color: var(--accent-golang);
 }
 
-.skill-tag.future {
-    background: rgba(124, 58, 237, 0.15);
-    border-color: var(--accent-secondary);
-    color: var(--accent-secondary);
+
+/* Projects Section - Revamped */
+
+/* Featured Project */
+.project-featured {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 212, 170, 0.06), rgba(124, 58, 237, 0.04), var(--bg-card));
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.skill-description {
+.project-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.project-featured:hover {
+    border-color: rgba(0, 212, 170, 0.35);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.project-featured-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-primary);
+    background: rgba(0, 212, 170, 0.1);
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.project-featured-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.project-featured-left {
+    flex: 1;
+}
+
+.project-featured-left h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.project-featured-left p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.project-impact {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
-/* Projects Section */
+.impact-icon {
+    font-size: 1rem;
+}
+
+.project-featured-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    min-width: 180px;
+}
+
+.project-featured-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: flex-end;
+}
+
+.stack-item {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.3rem 0.625rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: var(--text-secondary);
+}
+
+.stack-item.primary {
+    background: rgba(0, 173, 216, 0.12);
+    border-color: rgba(0, 173, 216, 0.25);
+    color: var(--accent-golang);
+    font-weight: 600;
+}
+
+/* Domain Labels */
+.project-domain {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.project-domain.fintech {
+    color: #f0b429;
+    background: rgba(240, 180, 41, 0.1);
+    border: 1px solid rgba(240, 180, 41, 0.2);
+}
+
+.project-domain.security {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.project-domain.devops {
+    color: #a78bfa;
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.project-domain.analytics {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* Company Label */
+.project-company {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: auto;
+    padding-top: 0.75rem;
+}
+
+/* V2 Project Cards Grid */
+.projects-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.project-card-v2 {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.75rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card-v2:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Top accent bar per domain */
+.project-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.project-card-v2.security .project-card-accent {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.project-card-v2.security:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.project-card-v2.fintech .project-card-accent {
+    background: linear-gradient(90deg, #f0b429, #fbbf24);
+}
+
+.project-card-v2.fintech:hover {
+    border-color: rgba(240, 180, 41, 0.3);
+}
+
+.project-card-v2.devops .project-card-accent {
+    background: linear-gradient(90deg, #a78bfa, #c4b5fd);
+}
+
+.project-card-v2.devops:hover {
+    border-color: rgba(167, 139, 250, 0.3);
+}
+
+.project-card-v2.analytics .project-card-accent {
+    background: linear-gradient(90deg, #38bdf8, #7dd3fc);
+}
+
+.project-card-v2.analytics:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.project-card-v2 h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+    color: var(--text-primary);
+}
+
+.project-card-v2 p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.project-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-stack-tags span {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+}
+
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -694,6 +1321,55 @@ section {
         border-right: none;
         padding-right: 0;
     }
+
+    /* Bento grid responsive - tablet */
+    .skills-bento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bento-hero {
+        grid-column: span 2;
+    }
+
+    .bento-languages,
+    .bento-cloud,
+    .bento-databases,
+    .bento-messaging {
+        grid-column: span 1;
+    }
+
+    .bento-competencies {
+        grid-column: span 2;
+    }
+
+    .bento-hero-content {
+        flex-direction: column;
+    }
+
+    .bento-hero-title {
+        font-size: 2rem;
+    }
+
+    .bento-hero-stats {
+        flex-wrap: wrap;
+    }
+
+    /* Projects responsive - tablet */
+    .projects-grid-v2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-featured-content {
+        flex-direction: column;
+    }
+
+    .project-featured-right {
+        align-items: flex-start;
+    }
+
+    .project-featured-stack {
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 640px) {
@@ -726,5 +1402,45 @@ section {
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    /* Bento grid responsive - mobile */
+    .skills-bento {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-hero,
+    .bento-languages,
+    .bento-cloud,
+    .bento-databases,
+    .bento-messaging,
+    .bento-competencies {
+        grid-column: span 1;
+    }
+
+    .bento-hero-stats {
+        gap: 1.25rem;
+    }
+
+    .cloud-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Projects responsive - mobile */
+    .projects-grid-v2 {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        padding: 1.5rem;
+    }
+
+    .project-featured-left h3 {
+        font-size: 1.35rem;
+    }
+
+    .project-impact {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 }

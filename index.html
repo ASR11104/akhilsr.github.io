@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akhil S R | Backend Developer</title>
-    <meta name="description" content="Backend Developer with 6 years of experience in building scalable microservices and security-focused applications.">
+    <title>Akhil S R | Senior Backend Developer</title>
+    <meta name="description"
+        content="Senior Backend Developer with 7 years of experience specializing in Golang, Python, and Node.js. Expert in scalable microservices, security pipelines (XDR/EDR), and financial transaction gateways.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
@@ -30,10 +35,11 @@
             <div class="hero-content">
                 <p class="greeting">Hello, I'm</p>
                 <h1 class="name">Akhil S R</h1>
-                <p class="tagline">Backend Developer | Golang Engineer</p>
+                <p class="tagline">Senior Backend Developer | Golang Engineer</p>
                 <p class="hero-description">
-                    Building scalable microservices and security-focused applications with 6 years of experience.
-                    Expert in Golang, Python, and modern cloud technologies.
+                    Building scalable microservices, high-throughput security pipelines, and secure financial gateways
+                    with 7 years of experience.
+                    Expert in Golang, Python, AWS cloud architecture, and Kafka event streaming.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -55,6 +61,7 @@
 
 <span class="keyword">type</span> <span class="type">Developer</span> <span class="keyword">struct</span> {
     Name      <span class="type">string</span>
+    Role      <span class="type">string</span>
     Experience <span class="type">int</span>
     Skills    []<span class="type">string</span>
 }
@@ -62,7 +69,8 @@
 <span class="keyword">func</span> <span class="function">main</span>() {
     dev := <span class="type">Developer</span>{
         Name:      <span class="string">"Akhil S R"</span>,
-        Experience: <span class="number">6</span>,
+        Role:      <span class="string">"Sr. Backend Dev"</span>,
+        Experience: <span class="number">7</span>,
         Skills: []<span class="type">string</span>{
             <span class="string">"Golang"</span>, <span class="string">"Python"</span>,
             <span class="string">"Kafka"</span>, <span class="string">"AWS"</span>,
@@ -79,23 +87,31 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a <span class="highlight">Backend Developer</span> with 6 years of experience 
-                        in building scalable microservices and security-focused applications. Based in 
-                        <span class="highlight">Trivandrum, Kerala</span>, currently working in <span class="highlight">Bangalore</span>.
+                        I'm a <span class="highlight">Senior Backend Developer</span> with 7 years of experience
+                        specializing in Golang, Python, and Node.js. Based in
+                        <span class="highlight">Trivandrum, Kerala</span>, currently working in <span
+                            class="highlight">Bangalore</span>.
                     </p>
                     <p>
-                        My journey started in <span class="highlight">July 2019</span> at TRaiCE Analytics Solutions, 
-                        where I built scalable backend services and integrated social media APIs. Later at 
-                        <span class="highlight">Uptycs</span>, I designed XDR/EDR security features including 
-                        vulnerability detection and threat detection engines using Kafka and PostgreSQL.
+                        My journey started in <span class="highlight">July 2019</span> at TRaiCE Analytics Solutions,
+                        where I built scalable backend services and integrated social media APIs. Later at
+                        <span class="highlight">Uptycs</span>, I designed core XDR/EDR security features including
+                        vulnerability detection, cloud asset exposure mapping, and threat detection engines using Kafka,
+                        Memgraph, and PostgreSQL.
                     </p>
                     <p>
-                        Currently at <span class="highlight">Synechron Technologies</span> working on financial 
-                        data pipelines and payment systems. I'm passionate about system design, performance 
-                        optimization, and writing clean, maintainable code.
+                        Currently at <span class="highlight">Synechron Technologies</span> (Client: Latitude Financial
+                        Services)
+                        architecting transaction gateways, leading identity migrations, and building high-availability
+                        financial data pipelines. Passionate about system design, observability, and writing
+                        high-concurrency, maintainable code.
                     </p>
                 </div>
                 <div class="about-timeline">
+                    <div class="timeline-item">
+                        <span class="year">2018</span>
+                        <span class="label">Intern at IIST</span>
+                    </div>
                     <div class="timeline-item">
                         <span class="year">2019</span>
                         <span class="label">Started at TRaiCE</span>
@@ -125,10 +141,18 @@
                             <span class="duration">Apr 2025 – Present</span>
                         </div>
                         <ul class="timeline-description">
-                            <li>Built data pipelines to process and validate large volumes of financial and customer data</li>
-                            <li>Developed Golang microservices for OTP-based payment validation using AWS SES</li>
-                            <li>Designed high-availability services on AWS (EC2, S3, SQS, SNS, Lambda)</li>
-                            <li>Collaborated with cross-functional teams for secure payment solutions</li>
+                            <li>Architected a transaction gateway service for integration with Innovative Payment
+                                Solutions, Inc. (IPSI), ensuring secure, high-throughput financial processing</li>
+                            <li>Led M2M identity migration from Okta to AWS Cognito, unifying the cloud identity stack
+                            </li>
+                            <li>Engineered high-availability data pipelines using Golang and Control-M for large-scale
+                                financial dataset processing with 100% data integrity</li>
+                            <li>Spearheaded multi-tenant non-production environment architecture, reducing environment
+                                contention across teams</li>
+                            <li>Enhanced system observability with advanced monitoring, reducing MTTR for production
+                                incidents</li>
+                            <li>Developed secure OTP-based payment validation services leveraging AWS SES and Lambda
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -142,12 +166,20 @@
                             <span class="duration">May 2022 – Apr 2025</span>
                         </div>
                         <ul class="timeline-description">
-                            <li>Designed XDR/EDR security features (vulnerability detection, malware & secret scanning)</li>
-                            <li>Built a rule engine in Golang leveraging Kafka & PostgreSQL for real-time threat detection</li>
-                            <li>Developed GitHub & Okta integrations for analytics and security automation</li>
-                            <li>Implemented Redis caching for high-performance services</li>
-                            <li>Integrated NVD & GitHub Security Advisories into CVE detection pipelines</li>
-                            <li>Optimized Golang services for concurrency and memory efficiency</li>
+                            <li>Designed and implemented core XDR/EDR security features including vulnerability
+                                detection, malware identification, and secret scanning</li>
+                            <li>Developed a Cloud Asset Exposure Engine using Memgraph, mapping AWS resources as graph
+                                nodes to identify internet-exposed assets</li>
+                            <li>Architected an async IaC scanning pipeline using RabbitMQ to decouple Golang triggers
+                                from Python Checkov workers</li>
+                            <li>Built a high-performance rule engine in Golang using Kafka and PostgreSQL for sub-second
+                                threat detection</li>
+                            <li>Optimized Golang services for concurrency and memory efficiency, reducing scan times and
+                                system overhead</li>
+                            <li>Integrated global vulnerability feeds (NVD, GitHub Security Advisories) into detection
+                                pipelines</li>
+                            <li>Implemented Redis caching, significantly reducing database load and improving response
+                                latency</li>
                         </ul>
                     </div>
                 </div>
@@ -157,13 +189,19 @@
                         <div class="timeline-header">
                             <h3>Full Stack Developer</h3>
                             <span class="company">TRaiCE Analytics Solutions</span>
+                            <span class="location">Kochi</span>
                             <span class="duration">Jul 2019 – May 2022</span>
                         </div>
                         <ul class="timeline-description">
-                            <li>Integrated social media APIs (Facebook, Instagram, Twitter, TikTok) for SaaS analytics</li>
-                            <li>Built scalable backend services with PostgreSQL optimization</li>
-                            <li>Implemented secure API authentication systems</li>
-                            <li>Automated content fetching, trend analysis, and user insights extraction</li>
+                            <li>Developed a multi-platform data aggregation engine integrating Facebook, Instagram,
+                                Twitter, and TikTok APIs for real-time SaaS analytics</li>
+                            <li>Implemented scalable Node.js and Python backend services with secure OAuth2 and API rate
+                                limit handling</li>
+                            <li>Optimized PostgreSQL performance via schema design and indexing for high-volume social
+                                media metrics</li>
+                            <li>Automated data pipelines and background workers for content fetching, trend analysis,
+                                and user insights</li>
+                            <li>Collaborated on robust error-handling and retry logic for third-party APIs</li>
                         </ul>
                     </div>
                 </div>
@@ -185,147 +223,347 @@
 
         <section id="skills" class="skills">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card primary">
-                    <div class="skill-icon">🐹</div>
-                    <h3>Primary</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag golang">Golang</span>
+            <div class="skills-bento">
+                <!-- Hero Card: Primary Language -->
+                <div class="bento-card bento-hero">
+                    <div class="bento-hero-content">
+                        <div class="bento-hero-left">
+                            <span class="bento-label">Primary Language</span>
+                            <h3 class="bento-hero-title">Golang</h3>
+                            <p class="bento-hero-desc">
+                                Microservices architecture, high-concurrency systems, memory-efficient processing.
+                                Built transaction gateways, rule engines, and security pipelines.
+                            </p>
+                        </div>
+                        <div class="bento-hero-right">
+                            <div class="bento-code-snippet">
+                                <code><span class="keyword">go</span> <span class="function">buildAndShip</span>(ctx)</code>
+                            </div>
+                        </div>
                     </div>
-                    <p class="skill-description">
-                        Microservices, concurrency, memory optimization.
-                        Built rule engines and high-performance services.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📜</div>
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">TypeScript</span>
+                    <div class="bento-hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">7+</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Companies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">XDR</span>
+                            <span class="stat-label">Security</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Fin</span>
+                            <span class="stat-label">Payments</span>
+                        </div>
                     </div>
-                    <p class="skill-description">
-                        Automation, scripting, API development with FastAPI.
-                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Gin</span>
-                        <span class="skill-tag">Node.js</span>
+
+                <!-- Languages -->
+                <div class="bento-card bento-languages">
+                    <span class="bento-label">Languages &amp; Frameworks</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Golang</span>
+                                <span class="skill-bar-level">Expert</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--fill-width: 95%;" data-color="golang"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">Python</span>
+                                <span class="skill-bar-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--fill-width: 85%;" data-color="python"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header">
+                                <span class="skill-bar-name">JavaScript / Node.js</span>
+                                <span class="skill-bar-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" style="--fill-width: 80%;" data-color="node"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-tags compact">
                         <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">Angular2+</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Node.js</span>
                     </div>
-                    <p class="skill-description">
-                        REST APIs, web applications, microservices frameworks.
-                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📨</div>
-                    <h3>Messaging</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Kafka</span>
-                        <span class="skill-tag">RabbitMQ</span>
+
+                <!-- Cloud & Infrastructure -->
+                <div class="bento-card bento-cloud">
+                    <span class="bento-label">Cloud &amp; Infrastructure</span>
+                    <div class="cloud-grid">
+                        <div class="cloud-item featured">
+                            <span class="cloud-icon">&#9729;&#65039;</span>
+                            <span class="cloud-name">AWS</span>
+                        </div>
+                        <div class="cloud-item">
+                            <span class="cloud-icon">&#128051;</span>
+                            <span class="cloud-name">Docker</span>
+                        </div>
+                        <div class="cloud-item">
+                            <span class="cloud-icon">&#128272;</span>
+                            <span class="cloud-name">Cognito</span>
+                        </div>
+                        <div class="cloud-item">
+                            <span class="cloud-icon">&#9889;</span>
+                            <span class="cloud-name">Lambda</span>
+                        </div>
+                        <div class="cloud-item">
+                            <span class="cloud-icon">&#128230;</span>
+                            <span class="cloud-name">S3</span>
+                        </div>
+                        <div class="cloud-item">
+                            <span class="cloud-icon">&#128236;</span>
+                            <span class="cloud-name">SQS/SNS</span>
+                        </div>
                     </div>
-                    <p class="skill-description">
-                        Real-time data pipelines, event streaming, inter-service communication.
-                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Databases</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Memgraph</span>
-                        <span class="skill-tag">Redis</span>
+
+                <!-- Databases -->
+                <div class="bento-card bento-databases">
+                    <span class="bento-label">Databases &amp; Caching</span>
+                    <div class="db-list">
+                        <div class="db-item">
+                            <span class="db-icon">&#128024;</span>
+                            <div class="db-info">
+                                <span class="db-name">PostgreSQL</span>
+                                <span class="db-detail">Primary RDBMS</span>
+                            </div>
+                        </div>
+                        <div class="db-item">
+                            <span class="db-icon">&#128311;</span>
+                            <div class="db-info">
+                                <span class="db-name">MySQL</span>
+                                <span class="db-detail">RDBMS</span>
+                            </div>
+                        </div>
+                        <div class="db-item">
+                            <span class="db-icon">&#128310;</span>
+                            <div class="db-info">
+                                <span class="db-name">Memgraph</span>
+                                <span class="db-detail">Graph Database</span>
+                            </div>
+                        </div>
+                        <div class="db-item">
+                            <span class="db-icon">&#128308;</span>
+                            <div class="db-info">
+                                <span class="db-name">Redis</span>
+                                <span class="db-detail">Cache &amp; Pub/Sub</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="skill-description">
-                        Query optimization, caching, graph databases.
-                    </p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <h3>DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">CI/CD</span>
+
+                <!-- Messaging -->
+                <div class="bento-card bento-messaging">
+                    <span class="bento-label">Event Streaming</span>
+                    <div class="messaging-items">
+                        <div class="messaging-item kafka">
+                            <span class="messaging-name">Apache Kafka</span>
+                            <span class="messaging-desc">High-throughput pipelines &amp; real-time event
+                                streaming</span>
+                        </div>
+                        <div class="messaging-item rabbitmq">
+                            <span class="messaging-name">RabbitMQ</span>
+                            <span class="messaging-desc">Async task queues &amp; decoupled worker architectures</span>
+                        </div>
                     </div>
-                    <p class="skill-description">
-                        EC2, S3, SQS, SNS, Lambda, containerization.
-                    </p>
+                </div>
+
+                <!-- Core Competencies -->
+                <div class="bento-card bento-competencies">
+                    <span class="bento-label">Core Competencies</span>
+                    <div class="competency-pills">
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#127959;&#65039;</span> System Design
+                        </span>
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#9889;</span> Concurrency
+                        </span>
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#128274;</span> API Security
+                        </span>
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#128202;</span> Data Pipelines
+                        </span>
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#128273;</span> OAuth2
+                        </span>
+                        <span class="competency-pill">
+                            <span class="pill-icon">&#128225;</span> Observability
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
             <h2 class="section-title">Key Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>XDR/EDR Security Platform</h3>
-                        <span class="project-tech">Golang + Kafka</span>
+
+            <!-- Featured Project -->
+            <div class="project-featured">
+                <div class="project-featured-badge">Featured</div>
+                <div class="project-featured-content">
+                    <div class="project-featured-left">
+                        <span class="project-domain fintech">Fintech</span>
+                        <h3>Transaction Gateway &mdash; IPSI</h3>
+                        <p>
+                            Architected a high-throughput transaction gateway for seamless integration with
+                            Innovative Payment Solutions, Inc. (IPSI). Led the M2M identity migration from
+                            Okta to AWS Cognito, and built secure OTP-based payment validation services
+                            meeting stringent financial compliance standards.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-icon">&#9889;</span>
+                                <span>High-throughput processing</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-icon">&#128274;</span>
+                                <span>Financial compliance</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-icon">&#128200;</span>
+                                <span>100% data integrity</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        Built threat detection system with rule engine for real-time vulnerability 
-                        and malware scanning. Integrated NVD and GitHub Security Advisories.
+                    <div class="project-featured-right">
+                        <div class="project-featured-stack">
+                            <span class="stack-item primary">Golang</span>
+                            <span class="stack-item">AWS Cognito</span>
+                            <span class="stack-item">SES</span>
+                            <span class="stack-item">Lambda</span>
+                            <span class="stack-item">Control-M</span>
+                            <span class="stack-item">S3</span>
+                        </div>
+                        <span class="project-company">Synechron &middot; Latitude Financial</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="projects-grid-v2">
+                <article class="project-card-v2 security">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain security">Security</span>
+                    <h3>XDR/EDR Security Platform</h3>
+                    <p>
+                        High-performance rule engine enabling sub-second threat detection
+                        for enterprise security events. Integrated NVD and GitHub Security
+                        Advisories for expanded CVE coverage.
                     </p>
-                    <div class="project-features">
+                    <div class="project-stack-tags">
+                        <span>Golang</span>
+                        <span>Kafka</span>
                         <span>PostgreSQL</span>
                         <span>Redis</span>
-                        <span>Kafka</span>
                     </div>
+                    <span class="project-company">Uptycs</span>
                 </article>
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Payment Validation Microservices</h3>
-                        <span class="project-tech">Golang + AWS</span>
-                    </div>
-                    <p class="project-description">
-                        OTP-based payment validation system with secure email delivery via AWS SES.
-                        High-availability design with EC2, SQS, SNS, and Lambda.
+
+                <article class="project-card-v2 security">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain security">Security</span>
+                    <h3>Cloud Asset Exposure Engine</h3>
+                    <p>
+                        Mapped AWS resources (Instances, Load Balancers, Security Groups)
+                        as graph nodes to identify and visualize internet-exposed assets
+                        in real time.
                     </p>
-                    <div class="project-features">
-                        <span>AWS SES</span>
-                        <span>SQS/SNS</span>
-                        <span>Lambda</span>
+                    <div class="project-stack-tags">
+                        <span>Golang</span>
+                        <span>Memgraph</span>
+                        <span>AWS</span>
                     </div>
+                    <span class="project-company">Uptycs</span>
                 </article>
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Social Media Analytics API</h3>
-                        <span class="project-tech">Node.js + Python</span>
-                    </div>
-                    <p class="project-description">
-                        SaaS platform integrating Facebook, Instagram, Twitter, TikTok APIs.
-                        Automated content fetching and trend analysis.
+
+                <article class="project-card-v2 devops">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain devops">DevOps</span>
+                    <h3>IaC Scanning Pipeline</h3>
+                    <p>
+                        Asynchronous Infrastructure-as-Code scanning pipeline using
+                        RabbitMQ to decouple Golang-based triggers from Python-based
+                        Checkov scanning workers.
                     </p>
-                    <div class="project-features">
-                        <span>PostgreSQL</span>
-                        <span>REST APIs</span>
-                        <span>Angular2+</span>
+                    <div class="project-stack-tags">
+                        <span>Golang</span>
+                        <span>Python</span>
+                        <span>RabbitMQ</span>
                     </div>
+                    <span class="project-company">Uptycs</span>
                 </article>
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Data Pipeline System</h3>
-                        <span class="project-tech">Golang + AWS</span>
-                    </div>
-                    <p class="project-description">
-                        Financial data pipeline processing large volumes from multiple sources.
-                        Data validation and processing with Control-M integration.
+
+                <article class="project-card-v2 fintech">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain fintech">Fintech</span>
+                    <h3>Financial Data Pipelines</h3>
+                    <p>
+                        High-availability data pipelines processing and validating
+                        large-scale financial datasets with 100% data integrity
+                        for downstream reporting.
                     </p>
-                    <div class="project-features">
-                        <span>S3</span>
+                    <div class="project-stack-tags">
+                        <span>Golang</span>
+                        <span>AWS S3</span>
                         <span>EC2</span>
                         <span>Control-M</span>
                     </div>
+                    <span class="project-company">Synechron &middot; Latitude Financial</span>
+                </article>
+
+                <article class="project-card-v2 analytics">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain analytics">Analytics</span>
+                    <h3>Social Media Analytics API</h3>
+                    <p>
+                        Multi-platform data aggregation engine integrating Facebook,
+                        Instagram, Twitter, and TikTok APIs for real-time SaaS
+                        analytics with OAuth2 security.
+                    </p>
+                    <div class="project-stack-tags">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>PostgreSQL</span>
+                        <span>OAuth2</span>
+                    </div>
+                    <span class="project-company">TRaiCE Analytics</span>
+                </article>
+
+                <article class="project-card-v2 fintech">
+                    <div class="project-card-accent"></div>
+                    <span class="project-domain fintech">Fintech</span>
+                    <h3>OTP Payment Validation</h3>
+                    <p>
+                        Secure OTP-based payment validation service leveraging
+                        AWS SES and Lambda, meeting stringent financial industry
+                        compliance and security standards.
+                    </p>
+                    <div class="project-stack-tags">
+                        <span>Golang</span>
+                        <span>AWS SES</span>
+                        <span>Lambda</span>
+                        <span>Cognito</span>
+                    </div>
+                    <span class="project-company">Synechron &middot; Latitude Financial</span>
                 </article>
             </div>
         </section>
+
 
         <section id="personal-projects" class="personal-projects">
             <h2 class="section-title">Personal Projects</h2>
@@ -336,7 +574,10 @@
                         <span class="project-tech">React 19 + Node.js + PostgreSQL</span>
                     </div>
                     <p class="project-description">
-                        A comprehensive personal finance management application that helps private sector professionals manage their finances effectively. Features for tracking expenses, incomes, investments, loans, and bank accounts, along with powerful analytics to understand spending patterns and financial health.
+                        A comprehensive personal finance management application that helps private sector professionals
+                        manage their finances effectively. Features for tracking expenses, incomes, investments, loans,
+                        and bank accounts, along with powerful analytics to understand spending patterns and financial
+                        health.
                     </p>
                     <div class="project-links">
                         <a href="https://github.com/ASR11104/personal-financier" target="_blank" class="project-link">
@@ -361,7 +602,7 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <p>
-                    I'm always open to discussing new projects, creative ideas, 
+                    I'm always open to discussing new projects, creative ideas,
                     or opportunities to be part of your visions.
                 </p>
                 <div class="contact-links">
@@ -373,9 +614,13 @@
                         <span class="contact-icon">💼</span>
                         LinkedIn
                     </a>
+                    <a href="https://github.com/ASR11104" target="_blank" class="contact-link">
+                        <span class="contact-icon">💻</span>
+                        GitHub
+                    </a>
                     <span class="contact-link location">
                         <span class="contact-icon">📍</span>
-                        Trivandrum, Kerala (Currently in Bangalore)
+                        Bangalore, KA (Native: Trivandrum, KL)
                     </span>
                 </div>
             </div>
@@ -383,7 +628,8 @@
     </main>
 
     <footer class="footer">
-        <p>© 2024 Akhil S R. Built with passion and Golang 🐹</p>
+        <p>© 2025 Akhil S R. Built with passion and Golang 🐹</p>
     </footer>
 </body>
+
 </html>
